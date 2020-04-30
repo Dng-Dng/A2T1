@@ -1,0 +1,12 @@
+#Please follow instructions on pdf document for the below script
+
+curl https://downloads.mysql.com/docs/world_x-db.zip >world_x-db.zip
+unzip world_x-db.zip
+sudo apt install unzip
+cd world_x-db
+mysql -u awkologist -p
+GRANT ALL ON world_x.* TO awkologist@localhost IDENTIFIED BY "awkology";
+create database world_x;
+mysql -u awkologist -p world_x < world_x.sql
+Use world_x;
+Show tables;

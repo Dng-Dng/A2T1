@@ -1,0 +1,11 @@
+part a)
+
+awk '{ if ($2 < 1000) {print}}' expression.tab
+
+part b)
+
+awk -F'\t' '$2~/ase/' annotation.tab
+
+part c)
+
+awk -F'\t' '(($3~/biosynthesis/)&&(($3~/Purine/)||($3~/Pyrimidine/)))' annotation.tab

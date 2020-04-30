@@ -1,0 +1,9 @@
+#Please run the below query in mysql the world_x database
+
+SELECT c.Name as 'Country', l.Percentage, ct.Name as 'Capital City'
+FROM country c INNER JOIN countrylanguage l
+ON c.Code = l.CountryCode
+INNER JOIN city ct
+ON c.Capital= ct.ID
+WHERE l.Language = "English"
+AND Percentage > 50;
